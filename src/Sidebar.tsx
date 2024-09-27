@@ -13,6 +13,7 @@ const Sidebar:React.FC<gc> = ({isOpen}) => {
             <li>Contact</li>
         </ul>
       </nav>
+      <h3>hyy</h3>
     </div>
   )
 }
