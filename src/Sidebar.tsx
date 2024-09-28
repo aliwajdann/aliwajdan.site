@@ -1,7 +1,3 @@
-// interface gc {
-//     isOpen : boolean
-// }
-// Sidebar:React.FC<gc>
 import { toggle } from "./Features/IsOpenSlice"
 import { RootState } from "./Store/Store"
 import { useSelector,useDispatch } from "react-redux"
@@ -11,17 +7,20 @@ const Sidebar = () => {
     console.log(isOpen)
     const dispatch = useDispatch()
   return (
-    <div className={`flex h-lvh w-lvw bg-orange-300 lg:hidden ${isOpen? 'block' : 'hidden'} absolute top-16 left-0 z-10`}>
-    <nav className={`w-2/5`}>
-        <ul className={`justify-around'}`}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
-        </ul>
-      </nav>
-      <div  onClick={()=> dispatch(toggle())} className="h-full w-2/3 bg-slate-500 opacity-15"></div>
-    </div>
+      <div className={`transition-transform duration-1000 ease-in-out flex h-full w-full lg:hidden 
+      absolute top-16 left-0 z-10 ${ isOpen ? "translate-x-0" : "-translate-x-full" }`}>
+          <nav className={`w-1/3  bg-red-600`}>
+           <ul className={`flex flex-col h-3/4 w-full justify-between px-4 py-10`}>
+             <li className="font-bold text-white text-xl">Home</li>
+             <li className="font-bold text-white text-xl">About</li>
+             <li className="font-bold text-white text-xl">Services</li>
+             <li className="font-bold text-white text-xl">Contact</li>
+           </ul>
+           <div className="h-1/4 bg-slate-600 w-full"></div>
+          </nav>
+       <div  onClick={()=> dispatch(toggle())} className="h-full w-2/3"></div>
+      </div>
+
   )
 }
 
