@@ -1,5 +1,5 @@
-import { toggle } from "./Features/IsOpenSlice"
-import { RootState } from "./Store/Store"
+import { toggle } from "../Features/IsOpenSlice"
+import { RootState } from "../Store/Store"
 import { useSelector,useDispatch } from "react-redux"
 
 const Sidebar = () => {

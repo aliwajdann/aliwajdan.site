@@ -1,6 +1,8 @@
-import Sidebar from "./Sidebar"
+// import Sidebar from "./Components/Sidebar"
+import Tailwindbar from "./Components/Tailwindbar"
 import { useDispatch} from "react-redux"
 import { toggle } from "./Features/IsOpenSlice"
+import { NavLink } from "react-router-dom"
 export default function Header() {
   const dispatch = useDispatch()
   return (
@@ -10,17 +12,17 @@ export default function Header() {
       <div className="font-bold text-slate-700">My Logo</div>
       <nav className="w-2/5">
         <ul className="lg:flex lg:justify-around hidden">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
+          <NavLink to={""}>Home</NavLink>
+          <NavLink to={"about"}>About</NavLink>
+          <NavLink to={""}>Home</NavLink>
+          <NavLink to={""}>Home</NavLink>
         </ul>
       </nav>
       <button onClick={()=> dispatch(toggle())} className="h-10 w-24 bg-amber-400">Button</button>
     </div>
     </header>
-    
-    <Sidebar />
+    {/* <Sidebar /> */}
+    <Tailwindbar />
     </>
   )
 }
