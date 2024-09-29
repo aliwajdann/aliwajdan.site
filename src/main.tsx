@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import Components from './Pages/Components.tsx'
 import Home from './Pages/Home.tsx'
 import Showcase from './Pages/Showcase.tsx'
-import About from './Pages/about.tsx'
+import About from './Pages/About.tsx'
 import { Route, RouterProvider,createBrowserRouter,createRoutesFromElements } from 'react-router-dom'
 
 const router = createBrowserRouter(

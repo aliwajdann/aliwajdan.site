@@ -15,7 +15,6 @@ const Sidebar = () => {
              <li className="font-bold text-white text-xl">About</li>
              <li className="font-bold text-white text-xl">Services</li>
              <li className="font-bold text-white text-xl">Contact</li>
-             <li className="font-bold text-white text-xl">Contact</li>
            </ul>
            <div className="h-1/4 bg-slate-600 w-full"></div>
           </nav>
