@@ -1,4 +1,3 @@
-import Tailwindbar from "./Components/Tailwindbar"
 import { useDispatch} from "react-redux"
 import { toggle } from "./Features/IsOpenSlice"
 import { NavLink } from "react-router-dom"
