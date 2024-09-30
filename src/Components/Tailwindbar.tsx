@@ -3,7 +3,6 @@ import { RootState } from "../Store/Store"
 import { toggle } from "../Features/IsOpenSlice"
 import { NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { Icon } from "@fortawesome/fontawesome-svg-core"
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
