@@ -17,7 +17,7 @@ export default function Tailwindbar() {
             <ul className="h-full w-full flex flex-col justify-between font-bold text-slate-300 p-4">
             <div className="flex justify-between">
             <NavLink onClick={()=> dispatch(toggle())} to={""}>Home</NavLink>
-            <FontAwesomeIcon onClick={()=> dispatch(toggle())} icon={faXmark} style={{ color: "darkgray" }} size="1x" />
+            <FontAwesomeIcon onClick={()=> dispatch(toggle())} icon={faXmark} size="1x" className="text-gray-400 cursor-pointer" />
             </div>
             <NavLink onClick={()=> dispatch(toggle())} to={"components"}>Components</NavLink>
             <NavLink onClick={()=> dispatch(toggle())}  to={"showcase"}>Showcase</NavLink>
