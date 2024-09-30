@@ -1,6 +1,6 @@
 import { useDispatch} from "react-redux"
 import { toggle } from "./Features/IsOpenSlice"
-import { Navigate, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import logo from "../public/logo.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisVertical,faSearchDollar } from "@fortawesome/free-solid-svg-icons"
