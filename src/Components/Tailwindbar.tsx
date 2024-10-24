@@ -11,7 +11,7 @@ export default function Tailwindbar() {
     const dispatch = useDispatch()
     
   return (
-    <div className={`z-10 absolute top-0 left-0 transition-all duration-500 ease-in-out bg-slate-800 filter backdrop-blur-3xl p-4 h-full w-full ${isOpen? "opacity-100 scale-100" : "opacity-0 scale-95 hidden"}`}>
+    <div onScroll={()=> dispatch(toggle())} className={`z-10 absolute top-0 left-0 lg:hidden transition-all duration-500 ease-in-out bg-slate-800 filter backdrop-blur-3xl p-4 h-lvh w-full ${isOpen? "opacity-100 scale-100" : "opacity-0 scale-95 hidden"}`}>
       <nav  className="z-20 bg-slate-900 h-2/4 w-full rounded-lg">
             <ul className="h-full w-full flex flex-col justify-between font-bold text-slate-300 p-4">
             <div className="flex justify-between">

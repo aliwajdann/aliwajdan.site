@@ -1,7 +1,8 @@
 import { useDispatch} from "react-redux"
 import { toggle } from "./Features/IsOpenSlice"
 import { NavLink } from "react-router-dom"
-import logo from "../public/logo.svg"
+import Tailwindbar from "./Components/Tailwindbar"
+import logo from "./assets/logo.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisVertical,faSearchDollar } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate } from "react-router-dom"
@@ -38,7 +39,7 @@ export default function Header() {
 
     </div>
     </header>
-    {/* <Tailwindbar /> */}
+    <Tailwindbar />
     </>
   )
 }
