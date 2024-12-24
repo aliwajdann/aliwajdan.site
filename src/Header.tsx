@@ -20,7 +20,7 @@ export default function Header() {
       <div className="w-1/2 lg:w-auto">
       <img className="h-28 w-52 lg:h-44 lg:w-96" src={logo} alt="logo" onClick={()=> navigate("")} />
       </div>
-  
+
      {/* nav  */}
       <nav className="w-2/5 hidden lg:block">
         <ul className="lg:flex lg:justify-around hidden">
