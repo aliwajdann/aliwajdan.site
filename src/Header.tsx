@@ -17,6 +17,7 @@ export default function Header() {
       </nav>
       <button onClick={()=>{setIsOpen(!isOpen)}} className="h-10 w-24 bg-amber-400">Button</button>
     </div>
+    <h2>heyy</h2>
     </header>
     <Sidebar isOpen ={isOpen}/>
     </>
