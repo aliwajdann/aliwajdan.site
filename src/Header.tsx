@@ -5,6 +5,7 @@ import Tailwindbar from "./Components/Tailwindbar"
 import logo from "./assets/logo.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisVertical,faSearchDollar } from "@fortawesome/free-solid-svg-icons"
+// import Sidebar from "./Components/Sidebar"
 import { useNavigate } from "react-router-dom"
 
 export default function Header() {
@@ -12,7 +13,7 @@ export default function Header() {
   const navigate = useNavigate()
   return (
     <>
-    <header className="bg-transparent h-16 transition-transform duration-1000 ease-in-out fixed top-0 w-lvw filter backdrop-blur-lg shadow-md shadow-teal-500">
+    <header className="bg-transparent h-16 transition-transform duration-1000 ease-in-out filter backdrop-blur-lg shadow-md shadow-teal-500">
     <div className="h-full w-full flex items-center justify-between">
 
      {/* logo div  */}
@@ -26,7 +27,7 @@ export default function Header() {
           <NavLink to={""}>Home</NavLink>
           <NavLink to={"components"}>Components</NavLink>
           <NavLink to={"showcase"}>Showcase</NavLink>
-          <NavLink to={"https://github.com/AliWajdanIT/aliwajdan.site"}>Github</NavLink>
+          <NavLink to={"https://github.com/AliWajdanIT/aliwajdan.site"} target="_blank" >Github</NavLink>
           <NavLink to={"about"}>About</NavLink>
         </ul>
       </nav>
@@ -40,6 +41,7 @@ export default function Header() {
     </div>
     </header>
     <Tailwindbar />
+    {/* <Sidebar /> */}
     </>
   )
 }

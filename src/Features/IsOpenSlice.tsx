@@ -11,4 +11,4 @@ const IsOpenSlice = createSlice({
 })
 
 export default IsOpenSlice.reducer;
-export const {toggle} = IsOpenSlice.actions
+export const {toggle} = IsOpenSlice.actions;
