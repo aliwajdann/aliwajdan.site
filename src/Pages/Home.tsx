@@ -31,7 +31,7 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
       </div>
-
+<h2>home hey</h2>
       {/* Main Content */}
       <div data-scroll-section>
         <Jokes />
