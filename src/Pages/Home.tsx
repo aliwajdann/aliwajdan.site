@@ -1,8 +1,8 @@
 import Jokes from "../Components/Jokes";
 import Animation from "../Components/Animation";
-import video from "../assets/Julia Sloane.mp4";
+// import video from "../assets/Julia Sloane.mp4";
 // import image from "../assets/steve-johnson.jpg"
-import steveImg from './assets/steve-johnson.jpg';
+// import steveImg from './assets/steve-johnson.jpg';
 
 
 export default function Home() {
