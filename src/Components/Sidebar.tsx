@@ -8,7 +8,7 @@ const Sidebar = () => {
     const dispatch = useDispatch()
   return (
       <div className={`transition-transform duration-1000 ease-in-out flex h-full w-full lg:hidden 
-      absolute top-16 left-0 z-10 ${ isOpen ? "translate-x-0" : "-translate-x-full" }`}>
+      absolute top-16 left-0 z-50 ${ isOpen ? "translate-x- 0" : "-translate-x-full" }`}>
           <nav className={`w-4/5 bg-red-600`}>
            <ul className={`flex flex-col h-3/4 w-full justify-between px-4 py-10`}>
              <li className="font-bold text-white text-xl">Home</li>
