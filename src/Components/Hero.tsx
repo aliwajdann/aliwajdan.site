@@ -58,8 +58,8 @@ useGSAP(()=>{
         <p className="text-light-text dark:text-dark-text opacity-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quaerat corrupti. Dolor temporibus error consequatur quaerat nulla mollitia similique animi.</p>
         <button onClick={()=>alert("kya hai bay")} className="text-dark-text opacity-0 px-3 py-2 transition-all bg-light-primary dark:hover:bg-light-accent dark:bg-dark-primary hover:bg-dark-accent lg:w-24">Click me</button>
        </div>
-       <div className="left-column w-1/2 text-light-text dark:text-dark-text">Left column
-       <img className="lg:w-1/2 pointer-events-none" src={profilePicture} alt="" />
+       <div className="left-column w-1/2 h-full text-light-text dark:text-dark-text flex items-center justify-center">
+       <img className="lg:w-1/2 pointer-events-none rounded-full" src={profilePicture} alt="" />
        </div>
       
          {/* <video autoPlay loop muted playsInline={true} key={video} className="object-cover absolute h-full w-full top-0 left-0 pointer-events-none"> 
