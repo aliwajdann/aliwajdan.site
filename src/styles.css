@@ -1,0 +1,28 @@
+/* Smoother transitions */
+.swiper-slide {
+  transition-timing-function: cubic-bezier(4, 0, 4, 1) !important;
+}
+
+/* Circular progress bar positioning */
+svg.w-10.h-10 {
+  position: relative;
+  z-index: 0;
+}
+
+button.absolute.text-white {
+  z-index: 1;
+}
+
+/* Smooth scrolling for category nav */
+.category-nav {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Aspect ratio for product images */
+.aspect-square {
+  aspect-ratio: 1/1;
+}

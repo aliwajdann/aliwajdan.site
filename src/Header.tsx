@@ -12,9 +12,8 @@ import Sidebar from "./Components/Sidebar";
 export default function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [isVisible, setIsVisible] = useState(true); // Controls header visibility
-  const [lastScrollY, setLastScrollY] = useState(0); // Tracks last scroll position
-
+  const [isVisible, setIsVisible] = useState(true); 
+  const [lastScrollY, setLastScrollY] = useState(0); 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
