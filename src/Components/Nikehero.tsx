@@ -69,7 +69,7 @@ const Nikehero = () => {
           nextEl: '.custom-next',
           prevEl: '.custom-prev'
         }}
-        onAutoplayTimeLeft={(swiper, timeLeft, percentage) => {
+        onAutoplayTimeLeft={(_blank, _, percentage) => {
           setProgress(1 - percentage);
         }}
         className="h-full w-full"

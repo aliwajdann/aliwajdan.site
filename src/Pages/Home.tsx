@@ -1,6 +1,5 @@
 // import Hero from "../Components/Hero";
 import Secondhero from "../Components/secondhero";
-import SecondSection from "../Components/SecondSection";
 import Nikehero from "../Components/Nikehero";
 import ProductShowcase from "../Components/ProductShowCase";
 import Twoimage from "../Components/TwoImages"
@@ -14,7 +13,6 @@ export default function Home() {
         <Secondhero />
         <ProductShowcase />
         <Twoimage />
-        {/* <SecondSection /> */}
     </>
   );
 }

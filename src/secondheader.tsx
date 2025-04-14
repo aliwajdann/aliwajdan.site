@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Header: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
   const dispatch = useDispatch();
   // Scroll animation (hide on scroll down, show on scroll up)
@@ -41,10 +41,7 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Mobile menu toggle
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
+ 
 
   return (
     <>
