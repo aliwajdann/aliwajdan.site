@@ -8,7 +8,7 @@ const ContactUsPage = () => {
     email: '',
     message: ''
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [_blank, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [result, setResult] = useState('');
