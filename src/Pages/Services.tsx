@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import WhyChooseUs from "../Components/WhyChooseUs";
+// import WhyChooseUs from "../Components/WhyChooseUs";
 import Technologies from "../Components/Technologies";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,10 +25,10 @@ const services: Service[] = [
     title: "SEO Optimization",
     description: "Rank higher and reach your audience with smart SEO strategies.",
   },
-  {
-    title: "E-commerce Solutions",
-    description: "Scalable, secure online stores tailored for conversions.",
-  },
+  // {
+  //   title: "E-commerce Solutions",
+  //   description: "Scalable, secure online stores tailored for conversions.",
+  // },
 ];
 
 export default function Services() {
@@ -59,7 +59,8 @@ export default function Services() {
   return (
     <>
     <motion.div
-      className="min-h-screen bg-gray-900 text-white px-4 py-16 mt-24"
+       style={{minHeight: "80vh"}}
+      className="bg-gray-900 text-white px-4 py-16 mt-24"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -80,7 +81,7 @@ export default function Services() {
         ))}
       </div>
     </motion.div>
-<WhyChooseUs />
+{/* <WhyChooseUs /> */}
 <Technologies />
     </>
 );

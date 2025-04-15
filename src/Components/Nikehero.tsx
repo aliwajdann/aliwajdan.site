@@ -47,7 +47,7 @@ const Nikehero = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-lvh w-full overflow-hidden">
       <Swiper
         ref={swiperRef}
         loop = { true }
@@ -109,7 +109,7 @@ const Nikehero = () => {
         <div className="custom-pagination flex justify-center"></div>
       </div>
 
-      <div className="absolute bottom-10 right-10 z-10 flex items-center space-x-4">
+      <div className="absolute bottom-7 right-10 z-10 flex items-center space-x-4">
         {/* Previous Arrow (New) */}
         <button className="hidden md:block custom-prev text-white p-2 rounded-full hover:bg-white/10">
           <FiChevronLeft size={24} />

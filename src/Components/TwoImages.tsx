@@ -56,27 +56,44 @@ const DualImageSection = () => {
         </div>
 
         {/* Mobile: Single image with fade transition */}
-        <div className="md:hidden relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`mobile-${images[currentIndex].id}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="absolute inset-0"
-            >
-              <img 
-                src={images[currentIndex].url} 
-                alt={images[currentIndex].text}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-6 left-6 text-white text-2xl font-bold">
-                {images[currentIndex].text}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        {/* Mobile: Single image with fade transition */}
+<div className="md:hidden relative" style={{ height: '80vh', margin: '2vh auto', width: '90%' }}>
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={`mobile-${images[currentIndex].id}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+      className="w-full h-full rounded-xl overflow-hidden shadow-xl"
+    >
+      <img 
+        src={images[currentIndex].url} 
+        alt={images[currentIndex].text}
+        className="w-full h-full object-cover"
+      />
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="absolute bottom-6 left-6 text-white text-2xl font-bold drop-shadow-lg"
+      >
+        {images[currentIndex].text}
+      </motion.div>
+    </motion.div>
+  </AnimatePresence>
+
+  {/* Dots indicator */}
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    {images.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentIndex(index)}
+        className={`w-2 h-2 rounded-full transition-all ${currentIndex === index ? 'bg-white w-4' : 'bg-white/50'}`}
+      />
+    ))}
+  </div>
+</div>
       </div>
     </div>
   );

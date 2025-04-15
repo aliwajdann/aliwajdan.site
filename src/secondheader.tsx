@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiSearch, FiUser, FiShoppingBag, FiX } from "react-icons/fi";
 import { NavLink, Link } from "react-router-dom";
+import logo from "./assets/loggooo.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +68,7 @@ const Header: React.FC = () => {
           <div className="flex-shrink-0">
             <Link to="/">
               <img 
-                src="https://www.nike.com/assets/experience/2023/brand-portal-guidelines/img/logo-outline.svg" 
+                src={logo} 
                 alt="Nike" 
                 className="h-8 w-auto"
               />

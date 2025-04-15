@@ -4,6 +4,7 @@ import { RootState } from "../Store/Store";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { FiX, FiHome, FiUser, FiSettings, FiMail } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const isOpen = useSelector((state: RootState) => state.isOpen);
@@ -22,10 +23,11 @@ const Sidebar = () => {
   }, [isOpen]);
 
   const navItems = [
-    { label: "Home", icon: <FiHome className="mr-3" /> },
-    { label: "About", icon: <FiUser className="mr-3" /> },
-    { label: "Services", icon: <FiSettings className="mr-3" /> },
-    { label: "Contact", icon: <FiMail className="mr-3" /> },
+    { to: "/", label: "Home", icon: <FiHome className="mr-3" /> },
+    { to: "about", label: "About", icon: <FiUser className="mr-3" /> },
+    { to: "services", label: "Services", icon: <FiSettings className="mr-3" /> },
+    { to: "contact", label: "Contact", icon: <FiMail className="mr-3" /> },
+    { to: "faq", label: "FAQ", icon: <FiMail className="mr-3" /> },
   ];
 
   return (
@@ -76,13 +78,14 @@ const Sidebar = () => {
                     whileHover={{ x: 5 }}
                     className="text-white"
                   >
-                    <a
-                      href="#"
+                    <NavLink
+                     onClick={() => dispatch(toggle())}
+                      to={item.to}
                       className="flex items-center px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition-all"
                     >
                       {item.icon}
                       {item.label}
-                    </a>
+                    </NavLink>
                   </motion.li>
                 ))}
               </motion.ul>
