@@ -33,15 +33,15 @@ const DualImageSection = () => {
   }, []);
 
   return (
-    <div className="w-full px-4 py-12">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-ful py-12 max-h-full">
+      <div className="">
         {/* Desktop: Two images side-by-side */}
-        <div className="hidden md:flex gap-6">
+        <div className="hidden md:flex">
           {images.map((image) => (
             <motion.div
               key={`desktop-${image.id}`}
               whileHover={{ scale: 0.98 }}
-              className="flex-1 aspect-[4/5] rounded-xl overflow-hidden shadow-lg"
+              className="flex-1 aspect-[4/5] overflow-hidden shadow-lg"
             >
               <img 
                 src={image.url} 

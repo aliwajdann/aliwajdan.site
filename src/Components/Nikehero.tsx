@@ -93,7 +93,7 @@ const Nikehero = () => {
                   playsInline
                   className="w-full h-full"
                 >
-                  <source src={item.src} type="video/mp4" />
+                  <source src={item.src} type="video/mp4"/>
                 </video>
               )}
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center">

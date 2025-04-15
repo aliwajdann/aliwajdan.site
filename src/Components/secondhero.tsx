@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import img from "../assets/jon-r8AFUpRp0J0-unsplash.jpg"
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -60,7 +61,7 @@ const secondhero: React.FC = () => {
         className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-2xl z-10"
       >
         <img
-          src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/skwgyqrbfzhu6uyeh0gg/air-max-270-mens-shoes-KkLcGR.png"
+          src= {img}
           alt="Nike Shoe"
           className="w-full h-auto object-contain"
         />
@@ -68,10 +69,10 @@ const secondhero: React.FC = () => {
 
       {/* Hero text */}
       <div className="relative z-20 h-full flex flex-col justify-center items-start px-8 md:px-16 lg:px-24">
-        <h1 className="hero-text text-6xl md:text-8xl font-bold text-white mb-4">
-          JUST DO IT.
+        <h1 className="hero-text text-6xl md:text-8xl font-bold text-white mb-4 ">
+          JUST D<span className="">O IT.</span>
         </h1>
-        <p className="hero-text text-xl md:text-2xl text-gray-300 mb-8 max-w-lg">
+        <p className="hero-text text-xl md:text-2xl md:text-gray-300 mb-8 max-w-lg text-white text-shadow-md">
           The future isn't waiting. Lace up and make it yours.
         </p>
         <button className="hero-text px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition">

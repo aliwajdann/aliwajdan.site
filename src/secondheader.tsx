@@ -48,7 +48,7 @@ const Header: React.FC = () => {
     <>
     <header
       ref={headerRef}
-      className="top-0 left-0 w-full bg-white z-50 shadow-sm h-16"
+      className="top-0 left-0 w-full bg-white z-50 shadow-sm fixed"
     >
       {/* Top Bar */}
       <div className="hidden md:block bg-gray-100 text-xs py-1 px-4">
