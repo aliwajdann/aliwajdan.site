@@ -5,6 +5,7 @@ import Sidebar from "./Components/Sidebar";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiSearch, FiUser, FiShoppingBag, FiX } from "react-icons/fi";
+import { NavLink, Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,7 +48,7 @@ const Header: React.FC = () => {
     <>
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 w-full bg-white z-50 shadow-sm"
+      className="top-0 left-0 w-full bg-white z-50 shadow-sm h-16"
     >
       {/* Top Bar */}
       <div className="hidden md:block bg-gray-100 text-xs py-1 px-4">
@@ -64,13 +65,13 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#">
+            <Link to="/">
               <img 
                 src="https://www.nike.com/assets/experience/2023/brand-portal-guidelines/img/logo-outline.svg" 
                 alt="Nike" 
                 className="h-8 w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -79,8 +80,18 @@ const Header: React.FC = () => {
             <a href="#" className="font-medium hover:text-gray-600">Men</a>
             <a href="#" className="font-medium hover:text-gray-600">Women</a>
             <a href="#" className="font-medium hover:text-gray-600">Kids</a>
-            <a href="#" className="font-medium hover:text-gray-600">Jordan</a>
-            <a href="#" className="font-medium hover:text-gray-600">Sport</a>
+            <NavLink to={"contact"} className="font-medium hover:text-gray-600">
+                Contact
+              </NavLink>
+            <NavLink to={"about"} className="font-medium hover:text-gray-600">
+                About
+              </NavLink>
+            <NavLink to={"services"} className="font-medium hover:text-gray-600">
+                Services
+              </NavLink>
+            <NavLink to={"faq"} className="font-medium hover:text-gray-600">
+                FAQ
+              </NavLink>
           </nav>
       
           {/* Icons */}

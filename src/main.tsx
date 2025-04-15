@@ -8,7 +8,10 @@ import Components from './Pages/Components.tsx'
 import Home from './Pages/Home.tsx'
 import Showcase from './Pages/Showcase.tsx'
 import About from './Pages/About.tsx'
+import Contact from './Pages/Contact.tsx'
+import Services from './Pages/Services.tsx'
 import { Route, RouterProvider,createBrowserRouter,createRoutesFromElements } from 'react-router-dom'
+import Faq from './Pages/Faq.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +20,9 @@ const router = createBrowserRouter(
       <Route path="components" element={<Components />} />
       <Route path="showcase" element={<Showcase />} />
       <Route path="about" element={<About />} />
-      {/* <Route path="" element={<About />} /> */}
+      <Route path="contact" element={<Contact />} />
+      <Route path="services" element={<Services />} />
+      <Route path="faq" element={<Faq />} />
     </Route>
   )
 )

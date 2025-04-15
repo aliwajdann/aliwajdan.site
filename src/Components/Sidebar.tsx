@@ -1,26 +1,108 @@
-import { toggle } from "../Features/IsOpenSlice"
-import { RootState } from "../Store/Store"
-import { useSelector,useDispatch } from "react-redux"
+import { motion, AnimatePresence } from "framer-motion";
+import { toggle } from "../Features/IsOpenSlice";
+import { RootState } from "../Store/Store";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { FiX, FiHome, FiUser, FiSettings, FiMail } from "react-icons/fi";
 
 const Sidebar = () => {
-  const isOpen = useSelector((state:RootState) => state.isOpen)
-    console.log(isOpen)
-    const dispatch = useDispatch()
+  const isOpen = useSelector((state: RootState) => state.isOpen);
+  const dispatch = useDispatch();
+
+  // Lock body scroll when sidebar is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
+  const navItems = [
+    { label: "Home", icon: <FiHome className="mr-3" /> },
+    { label: "About", icon: <FiUser className="mr-3" /> },
+    { label: "Services", icon: <FiSettings className="mr-3" /> },
+    { label: "Contact", icon: <FiMail className="mr-3" /> },
+  ];
+
   return (
-      <div className={`transition-transform duration-1000 ease-in-out flex h-full w-full lg:hidden 
-      absolute top-20 left-0 z-50 ${ isOpen ? "translate-x- 0" : "-translate-x-full" }`}>
-          <nav className={`w-4/5 bg-red-600`}>
-           <ul className={`flex flex-col h-3/4 w-full justify-between px-4 py-10`}>
-             <li className="font-bold text-white text-xl">Home</li>
-             <li className="font-bold text-white text-xl">About</li>
-             <li className="font-bold text-white text-xl">Services</li>
-             <li className="font-bold text-white text-xl">Contact</li>
-           </ul>
-           <div className="h-1/4 bg-slate-600 w-full"></div>
-          </nav>
-       <div  onClick={()=> dispatch(toggle())} className="h-full w-1/5"></div>
-      </div>
-  )
-}
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Overlay */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => dispatch(toggle())}
+            className="fixed inset-0 z-40 bg-black bg-opacity-50 backdrop-blur-sm lg:hidden"
+          />
+
+          {/* Sidebar */}
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="fixed top-0 left-0 z-50 flex h-screen w-4/5 max-w-sm"
+          >
+            <motion.nav
+              className="flex flex-col w-full bg-gradient-to-b from-gray-900 to-gray-800 shadow-xl"
+            >
+              {/* Header */}
+              <div className="flex justify-end p-4">
+                <button
+                  onClick={() => dispatch(toggle())}
+                  className="p-2 text-gray-400 hover:text-white"
+                >
+                  <FiX size={24} />
+                </button>
+              </div>
+
+              {/* Navigation Items */}
+              <motion.ul className="flex-1 px-6 py-4 space-y-6">
+                {navItems.map((item, index) => (
+                  <motion.li
+                    key={item.label}
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ 
+                      x: 0, 
+                      opacity: 1,
+                      transition: { delay: 0.1 + index * 0.1 }
+                    }}
+                    whileHover={{ x: 5 }}
+                    className="text-white"
+                  >
+                    <a
+                      href="#"
+                      className="flex items-center px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition-all"
+                    >
+                      {item.icon}
+                      {item.label}
+                    </a>
+                  </motion.li>
+                ))}
+              </motion.ul>
+
+              {/* Footer */}
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { delay: 0.5 } }}
+                className="p-6 bg-gray-800"
+              >
+                <p className="text-gray-400 text-sm">
+                  © {new Date().getFullYear()} Your Brand
+                </p>
+              </motion.div>
+            </motion.nav>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+};
 
 export default Sidebar;

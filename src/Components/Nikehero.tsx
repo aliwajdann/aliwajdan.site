@@ -76,7 +76,7 @@ const Nikehero = () => {
       >
         {mediaItems.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-full w-full">
+            <div className="relative h-full w-full bg-black">
               {item.type === 'image' ? (
                 <img 
                   src={item.src} 
@@ -91,13 +91,13 @@ const Nikehero = () => {
                   muted 
                   loop 
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
                 >
                   <source src={item.src} type="video/mp4" />
                 </video>
               )}
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                <h2 className="text-white text-5xl font-bold">Nike Campaign {index + 1}</h2>
+                {/* <h2 className="text-white text-5xl font-bold">Nike Campaign {index + 1}</h2> */}
               </div>
             </div>
           </SwiperSlide>
