@@ -68,9 +68,9 @@ const secondhero: React.FC = () => {
       </div>
 
       {/* Hero text */}
-      <div className="relative z-20 h-full flex flex-col justify-center items-start px-8 md:px-16 lg:px-24">
+      <div className="relative z-20 h-full flex flex-col justify-center items-start px-4 md:px-16 lg:px-24">
         <h1 className="hero-text text-6xl md:text-8xl font-bold text-white mb-4 ">
-          DUST D<span className="">O IT.</span>
+          JUST D<span className="">O IT.</span>
         </h1>
         <p className="hero-text text-xl md:text-2xl md:text-gray-300 mb-8 max-w-lg text-white text-shadow-md">
           The future isn't waiting. Lace up and make it yours.
