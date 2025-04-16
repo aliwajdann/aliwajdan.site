@@ -36,7 +36,7 @@ export default function Technologies() {
   }, []);
 
   return (
-    <section className="bg-gray-900 text-white py-20 md:pt-0 px-4">
+    <section className="bg-gray-900 text-white py-20 md:pt-0 px-4 overflow-hidden">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
         Technologies We Use
       </h2>

@@ -60,7 +60,7 @@ export default function Services() {
     <>
     <motion.div
        style={{minHeight: "80vh"}}
-      className="bg-gray-900 text-white px-4 py-16 mt-24"
+      className="bg-gray-900 text-white px-4 py-16 mt-16 w-full"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

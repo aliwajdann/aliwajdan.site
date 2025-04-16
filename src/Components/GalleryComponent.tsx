@@ -2,7 +2,7 @@
 import { OrbitControls, useTexture, Text } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import { DoubleSide } from 'three'
 import img from "../assets/image-1.jpg"
 import img1 from "../assets/image-1.jpg"
@@ -94,9 +94,9 @@ type PortfolioItemProps = {
   onActiveChange: (isActive: boolean) => void
 }
 
-function PortfolioItem({ position, imageUrl, title, slug, isActive, onActiveChange }: PortfolioItemProps) {
+function PortfolioItem({ position, imageUrl, title, isActive, onActiveChange }: PortfolioItemProps) {
   const texture = useTexture(imageUrl)
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [hovered, setHovered] = useState(false)
   const [hasError, ] = useState(false)
   const [loaded, setLoaded] = useState(false)
@@ -105,9 +105,9 @@ function PortfolioItem({ position, imageUrl, title, slug, isActive, onActiveChan
     if (texture) setLoaded(true)
   }, [texture])
 
-  const handleClick = () => {
-    navigate(`/portfolio/${slug}`)
-  }
+  // const handleClick = () => {
+  //   navigate(`/portfolio/${slug}`)
+  // }
 
   const handlePointerOver = () => {
     setHovered(true)
@@ -149,7 +149,7 @@ function PortfolioItem({ position, imageUrl, title, slug, isActive, onActiveChan
       position={position}
       onPointerOver={handlePointerOver}
       onPointerOut={handlePointerOut}
-      onClick={handleClick}
+      // onClick={handleClick}
     >
       {/* Main Image Panel */}
       <mesh 
