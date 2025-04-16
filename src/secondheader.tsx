@@ -77,17 +77,17 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
-            <NavLink to={"planet"} className="font-medium hover:text-gray-600">
-                3D Planet
-              </NavLink>
-            <NavLink to={"contact"} className="font-medium hover:text-gray-600">
-                Contact
-              </NavLink>
             <NavLink to={"about"} className="font-medium hover:text-gray-600">
                 About
               </NavLink>
             <NavLink to={"services"} className="font-medium hover:text-gray-600">
                 Services
+              </NavLink>
+            <NavLink to={"contact"} className="font-medium hover:text-gray-600">
+                Contact
+              </NavLink>
+            <NavLink to={"planet"} className="font-medium hover:text-gray-600">
+                3D Planet
               </NavLink>
             <NavLink to={"faq"} className="font-medium hover:text-gray-600">
                 FAQ

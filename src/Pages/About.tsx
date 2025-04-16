@@ -1,6 +1,9 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FiAward, FiUsers, FiLayers } from 'react-icons/fi';
 import TeamMemberCard from '../Components/TeamMemberCard';
+import about1 from "../assets/about-1.jpg"
+import about2 from "../assets/about-2.jpg"
+import about3 from "../assets/about-3.jpg"
 
 const AboutPage = () => {
   const { scrollYProgress } = useScroll();
@@ -8,9 +11,9 @@ const AboutPage = () => {
 
   // Team data
   const team = [
-    { name: "Alex Chen", role: "Creative Director", image: "/team/alex.jpg" },
-    { name: "Jamie Rivera", role: "Lead Designer", image: "/team/jamie.jpg" },
-    { name: "Taylor Smith", role: "Motion Specialist", image: "/team/taylor.jpg" }
+    { name: "Alex Chen", role: "Creative Director", image: about1 },
+    { name: "Jamie Rivera", role: "Lead Designer", image: about2 },
+    { name: "Taylor Smith", role: "Motion Specialist", image: about3 }
   ];
 
   return (
@@ -88,7 +91,7 @@ const AboutPage = () => {
             Meet The Visionaries
           </motion.h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4">
             {team.map((member, index) => (
               <TeamMemberCard 
                 key={index}

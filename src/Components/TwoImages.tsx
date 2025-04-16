@@ -1,7 +1,7 @@
 import  { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import p1 from "../assets/p1.jpg"
-import p2 from "../assets/p2.jpg"
+import p1 from "../assets/pexels-arts-1496373.jpg"
+import p2 from "../assets/pexels-eberhardgross-1367192.jpg"
 
 
 const DualImageSection = () => {
@@ -57,7 +57,7 @@ const DualImageSection = () => {
 
         {/* Mobile: Single image with fade transition */}
         {/* Mobile: Single image with fade transition */}
-<div className="md:hidden relative" style={{ height: '80vh', margin: '2vh auto', width: '90%' }}>
+<div className="md:hidden relative" style={{ height: '65vh', margin: '2vh auto', width: '95%' }}>
   <AnimatePresence mode="wait">
     <motion.div
       key={`mobile-${images[currentIndex].id}`}

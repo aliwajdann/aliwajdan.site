@@ -3,7 +3,7 @@ import { toggle } from "../Features/IsOpenSlice";
 import { RootState } from "../Store/Store";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { FiX, FiHome, FiUser, FiSettings, FiMail } from "react-icons/fi";
+import { FiX,  FiUser, FiSettings, FiMail, FiInfo, FiPieChart, FiCamera, FiBarChart2, FiChevronsDown} from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
@@ -23,18 +23,19 @@ const Sidebar = () => {
   }, [isOpen]);
 
   const navItems = [
-    { to: "/", label: "Home", icon: <FiHome className="mr-3" /> },
+    // { to: "/", label: "Home", icon: <FiHome className="mr-3" /> },
     { to: "about", label: "About", icon: <FiUser className="mr-3" /> },
     { to: "services", label: "Services", icon: <FiSettings className="mr-3" /> },
     { to: "contact", label: "Contact", icon: <FiMail className="mr-3" /> },
-    { to: "faq", label: "FAQ", icon: <FiMail className="mr-3" /> },
-    { to: "planet", label: "3D Planet", icon: <FiMail className="mr-3" /> },
-    { to: "gallery", label: "Gallery", icon: <FiMail className="mr-3" /> },
-    { to: "scroll", label: "Gallery", icon: <FiMail className="mr-3" /> },
-    { to: "productsconfig", label: "Product Configurator", icon: <FiMail className="mr-3" /> },
+    { to: "faq", label: "FAQ", icon: <FiInfo className="mr-3" /> },
+    { to: "planet", label: "3D Planet", icon: <FiPieChart className="mr-3" /> },
+    { to: "gallery", label: "Gallery", icon: <FiCamera className="mr-3" /> },
+    { to: "productsconfig", label: "Product Configurator", icon: <FiBarChart2 className="mr-3" /> },
+    { to: "scroll", label: "Scroll", icon: <FiChevronsDown className="mr-3" /> },
   ];
 
   return (
+    <div className="md:hidden">
     <AnimatePresence>
       {isOpen && (
         <>
@@ -109,6 +110,7 @@ const Sidebar = () => {
         </>
       )}
     </AnimatePresence>
+    </div>
   );
 };
 

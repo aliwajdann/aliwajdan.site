@@ -47,7 +47,7 @@ const Nikehero = () => {
   };
 
   return (
-    <section className="relative h-lvh w-full overflow-hidden">
+    <section  className="relative h-screen w-full overflow-hidden">
       <Swiper
         ref={swiperRef}
         loop = { true }
