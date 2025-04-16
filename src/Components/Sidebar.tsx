@@ -28,6 +28,10 @@ const Sidebar = () => {
     { to: "services", label: "Services", icon: <FiSettings className="mr-3" /> },
     { to: "contact", label: "Contact", icon: <FiMail className="mr-3" /> },
     { to: "faq", label: "FAQ", icon: <FiMail className="mr-3" /> },
+    { to: "planet", label: "3D Planet", icon: <FiMail className="mr-3" /> },
+    { to: "gallery", label: "Gallery", icon: <FiMail className="mr-3" /> },
+    { to: "scroll", label: "Gallery", icon: <FiMail className="mr-3" /> },
+    { to: "productsconfig", label: "Product Configurator", icon: <FiMail className="mr-3" /> },
   ];
 
   return (

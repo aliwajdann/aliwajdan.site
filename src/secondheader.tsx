@@ -77,10 +77,9 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
-            <a href="#" className="font-medium hover:text-gray-600">New</a>
-            <a href="#" className="font-medium hover:text-gray-600">Men</a>
-            <a href="#" className="font-medium hover:text-gray-600">Women</a>
-            <a href="#" className="font-medium hover:text-gray-600">Kids</a>
+            <NavLink to={"planet"} className="font-medium hover:text-gray-600">
+                3D Planet
+              </NavLink>
             <NavLink to={"contact"} className="font-medium hover:text-gray-600">
                 Contact
               </NavLink>
@@ -92,6 +91,15 @@ const Header: React.FC = () => {
               </NavLink>
             <NavLink to={"faq"} className="font-medium hover:text-gray-600">
                 FAQ
+              </NavLink>
+            <NavLink to={"gallery"} className="font-medium hover:text-gray-600">
+                Gallery
+              </NavLink>
+            <NavLink to={"scroll"} className="font-medium hover:text-gray-600">
+                Scroll
+              </NavLink>
+            <NavLink to={"productsconfig"} className="font-medium hover:text-gray-600">
+                Product Configurator
               </NavLink>
           </nav>
       

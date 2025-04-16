@@ -12,6 +12,11 @@ import Contact from './Pages/Contact.tsx'
 import Services from './Pages/Services.tsx'
 import { Route, RouterProvider,createBrowserRouter,createRoutesFromElements } from 'react-router-dom'
 import Faq from './Pages/Faq.tsx'
+import PlanetPage from './Pages/PlanetPage.tsx'
+import ScrollPage from './Pages/ScrollPage.tsx'
+import GalleryPage from './Pages/GalleryPage.tsx'
+import { ProductConfigurator } from './Pages/ProductConfigPage.tsx'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +28,12 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="services" element={<Services />} />
       <Route path="faq" element={<Faq />} />
+      <Route path="planet" element={<PlanetPage />} />
+      <Route path="gallery" element={<GalleryPage />} />
+      <Route path="scroll" element={<ScrollPage />} />
+      <Route path="productsconfig" element={<ProductConfigurator />} />
     </Route>
+
   )
 )
 
