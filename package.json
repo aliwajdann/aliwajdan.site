@@ -47,5 +47,10 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^6.2.2"
-  }
+  },
+  "overrides": {
+  "react": "18.2.0",
+  "react-dom": "18.2.0"
+}
+
 }
