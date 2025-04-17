@@ -73,7 +73,7 @@ const secondhero: React.FC = () => {
           JUST D<span className="">O IT.</span>
         </h1>
         <p className="hero-text text-xl md:text-2xl md:text-gray-300 mb-8 max-w-lg text-white text-shadow-md">
-          The future isn't waiting. Lace up and make it yours.
+          The future isn't waiting. Lace up and make it yours
         </p>
         <button className="hero-text px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition">
           Shop Now
