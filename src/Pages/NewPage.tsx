@@ -63,7 +63,7 @@ const ThreeScene = () => {
       <Text
         position={[0, -2, 0]}
         color="#ff3366"
-        fontSize={0.2}
+        fontSize={0.3}
         maxWidth={5}
         lineHeight={1}
         letterSpacing={0.02}
