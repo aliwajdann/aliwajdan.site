@@ -16,6 +16,7 @@ import PlanetPage from './Pages/PlanetPage.tsx'
 import ScrollPage from './Pages/ScrollPage.tsx'
 import GalleryPage from './Pages/GalleryPage.tsx'
 import { ProductConfigurator } from './Pages/ProductConfigPage.tsx'
+import BirthdayWish from './Pages/NewPage.tsx'
 
 
 const router = createBrowserRouter(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path="gallery" element={<GalleryPage />} />
       <Route path="scroll" element={<ScrollPage />} />
       <Route path="productsconfig" element={<ProductConfigurator />} />
+      <Route path="newpage" element={<BirthdayWish />} />
     </Route>
 
   )
