@@ -2,12 +2,12 @@ import { useDispatch } from "react-redux";
 import { toggle } from "./Features/IsOpenSlice";
 import { NavLink } from "react-router-dom";
 // import Tailwindbar from "./Components/Tailwindbar";
-import logo from "./assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical, faSearchDollar } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Sidebar from "./Components/Sidebar";
+import logo from './assets/log.png'
 
 export default function Header() {
   const dispatch = useDispatch();

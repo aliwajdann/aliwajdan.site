@@ -146,7 +146,7 @@ const BirthdayWish = () => {
             delay: 0.3
           }}
         >
-          Happy Birthday Eman
+          Happy Birthday
         </motion.h1>
 
         <div className="messages">
@@ -331,4 +331,4 @@ const styleElement = document.createElement('style');
 styleElement.innerHTML = styles;
 document.head.appendChild(styleElement);
 
-export default BirthdayWish;
+// export default BirthdayWish;

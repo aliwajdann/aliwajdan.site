@@ -101,9 +101,6 @@ const Header: React.FC = () => {
             <NavLink to={"productsconfig"} className="font-medium hover:text-gray-600">
                 Product Configurator
               </NavLink>
-            <NavLink to={"newpage"} className="font-medium hover:text-gray-600">
-              New Page
-              </NavLink>
           </nav>
       
           {/* Icons */}
