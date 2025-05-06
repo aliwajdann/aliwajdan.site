@@ -331,4 +331,4 @@ const styleElement = document.createElement('style');
 styleElement.innerHTML = styles;
 document.head.appendChild(styleElement);
 
-// export default BirthdayWish;
+export default BirthdayWish;
